@@ -38,17 +38,12 @@ body {
   margin: 100px 0;
 }
 
-.names.auto div {
-  margin: 6px 0;
-  white-space: nowrap;
+.endroll{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0 40px;
+  width: fit-content;
 }
-
-.names.auto div:nth-child(5n+1) { padding-left: 0px; }
-.names.auto div:nth-child(5n+2) { padding-left: 20px; }
-.names.auto div:nth-child(5n+3) { padding-left: 50px; }
-.names.auto div:nth-child(5n+4) { padding-left: 10px; }
-.names.auto div:nth-child(5n+5) { padding-left: 40px; }
-
 button {
   position: fixed;
   bottom: 20px;
@@ -67,31 +62,12 @@ button {
 
    <div class="class-row">
 
-  <!-- 左 -->
-  <div class="class-wide">
-    <div class="class-title">1J1</div>
-    <div class="names auto">
-      <div>◯△ 太郎 ◯△ 太郎 ◯△ 太郎 ◯△ 太郎 ◯△ 太郎</div>
-      <div>◯△ 太郎 ◯△ 太郎 ◯△ 太郎 ◯△ 太郎 ◯△ 太郎</div>
-      <div>◯△ 太郎 ◯△ 太郎 ◯△ 太郎 ◯△ 太郎 ◯△ 太郎</div>
-      <div>◯△ 太郎 ◯△ 太郎 ◯△ 太郎 ◯△ 太郎 ◯△ 太郎</div>
-      <div>◯△ 太郎 ◯△ 太郎 ◯△ 太郎 ◯△ 太郎 ◯△ 太郎</div>
-      <div>◯△ 太郎 ◯△ 太郎 ◯△ 太郎 ◯△ 太郎 ◯△ 太郎</div>
-    </div>
-  </div>
-
-  <!-- 右 -->
-  <div class="class-wide">
-    <div class="class-title">1J2</div>
-    <div class="names auto">
-      <div>◯△ 太郎 ◯△ 太郎 ◯△ 太郎 ◯△ 太郎 ◯△ 太郎</div>
-      <div>◯△ 太郎 ◯△ 太郎 ◯△ 太郎 ◯△ 太郎 ◯△ 太郎</div>
-      <div>◯△ 太郎 ◯△ 太郎 ◯△ 太郎 ◯△ 太郎 ◯△ 太郎</div>
-      <div>◯△ 太郎 ◯△ 太郎 ◯△ 太郎 ◯△ 太郎 ◯△ 太郎</div>
-      <div>◯△ 太郎 ◯△ 太郎 ◯△ 太郎 ◯△ 太郎 ◯△ 太郎</div>
-      <div>◯△ 太郎 ◯△ 太郎 ◯△ 太郎 ◯△ 太郎 ◯△ 太郎</div>
-    </div>
-  </div>
+     <div class="endroll">
+  <div>1 学年 名前</div>
+  <div>2 学年 名前</div>
+  <div>3 学年 名前</div>
+  <div>4 学年 名前</div>
+</div>
 
 </div>
 
