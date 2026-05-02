@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Credits</title>
-<audio id="music" src="melt.mp3"></audio>
+
 
   
 <style>
@@ -32,37 +32,15 @@ body {
 
 @keyframes scroll {
   from { transform: translateY(100vh); }
-  to   { transform: translateY(-400%); }  /* ←ここ増やす */
+  to   { transform: translateY(-400%); }
 }
 
+<audio id="music" src="melt.mp3"></audio>
+  
 .spacer {
   height: 30vh;
 }
 
-<script>
-const credits = document.getElementById("credits");
-const music = document.getElementById("music");
-
-function play() {
-  credits.style.animationPlayState = "running";
-  music.currentTime = 0;
-  music.play();
-}
-
-function pause() {
-  credits.style.animationPlayState = "paused";
-  music.pause();
-}
-
-function reset() {
-  credits.style.animation = "none";
-  credits.offsetHeight;
-  credits.style.animation = "scroll 270s linear forwards";
-  credits.style.animationPlayState = "paused";
-  music.pause();
-  music.currentTime = 0;
-}
-</script>
 
 /* セクション */
 .section {
@@ -98,7 +76,12 @@ function reset() {
 .names {
   font-size: 18px;
   line-height: 1.9;
-  text-align: left;
+　text-align: center;
+}
+
+.class-wide {
+  width: 400px;
+  text-align: center;
 }
 
 /* 通常リスト */
@@ -113,11 +96,7 @@ function reset() {
   margin-top: 120px;
 }
 
-/* スクロール */
-@keyframes scroll {
-  from { transform: translateY(100vh); }
-  to   { transform: translateY(-220%); }
-}
+
 /* コントロール */
 .controls {
   position: fixed;
