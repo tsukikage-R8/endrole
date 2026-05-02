@@ -220,16 +220,23 @@ button {
 
 <script>
 const credits = document.getElementById("credits");
+const music = document.getElementById("music");
 
 function play() {
+  music.currentTime = 0;
+  music.play();
   credits.style.animationPlayState = "running";
 }
 
 function pause() {
+  music.pause();
   credits.style.animationPlayState = "paused";
 }
 
 function reset() {
+  music.pause();
+  music.currentTime = 0;
+
   credits.style.animation = "none";
   credits.offsetHeight;
   credits.style.animation = "scroll 270s linear forwards";
