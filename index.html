@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Credits</title>
+<audio id="music" src="melt.mp3"></audio>
+
+  
+<style>
+body {
+  margin: 0;
+  background: black;
+  color: white;
+  overflow: hidden;
+  font-family: "Hiragino Mincho ProN", serif;
+}
+
+.container {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+}
+
+.credits {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  animation: scroll 270s linear forwards;
+  animation-play-state: paused;
+}
+
+@keyframes scroll {
+  from { transform: translateY(100vh); }
+  to   { transform: translateY(-400%); }  /* ←ここ増やす */
+}
+
+.spacer {
+  height: 30vh;
+}
+
+<script>
+const credits = document.getElementById("credits");
+const music = document.getElementById("music");
+
+function play() {
+  credits.style.animationPlayState = "running";
+  music.currentTime = 0;
+  music.play();
+}
+
+function pause() {
+  credits.style.animationPlayState = "paused";
+  music.pause();
+}
+
+function reset() {
+  credits.style.animation = "none";
+  credits.offsetHeight;
+  credits.style.animation = "scroll 270s linear forwards";
+  credits.style.animationPlayState = "paused";
+  music.pause();
+  music.currentTime = 0;
+}
+</script>
+
+/* セクション */
+.section {
+  text-align: center;
+  margin: 120px 0;
+}
+
+.role {
+  font-size: 26px;
+  opacity: 0.7;
+  margin-bottom: 40px;
+}
+
+/* 横並びクラス */
+.class-row {
+  display: flex;
+  justify-content: center;
+  gap: 80px;
+  margin: 60px 0;
+}
+
+.class-wide {
+  width: 500px;
+}
+
+.class-title {
+  font-size: 22px;
+  margin-bottom: 10px;
+  opacity: 0.85;
+}
+
+/* 名前（横詰め） */
+.names {
+  font-size: 18px;
+  line-height: 1.9;
+  text-align: left;
+}
+
+/* 通常リスト */
+.name {
+  font-size: 20px;
+  margin: 5px 0;
+}
+
+/* 学校名 */
+.school {
+  font-size: 34px;
+  margin-top: 120px;
+}
+
+/* スクロール */
+@keyframes scroll {
+  from { transform: translateY(100vh); }
+  to   { transform: translateY(-220%); }
+}
+/* コントロール */
+.controls {
+  position: fixed;
+  bottom: 20px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+button {
+  background: rgba(255,255,255,0.1);
+  color: white;
+  border: 1px solid white;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+<div class="credits" id="credits">
+
+<div class="spacer"></div>
+  
+<!-- キャスト -->
+<div class="section">
+<div class="role">キャスト</div>
+
+<div class="class-row">
+<div class="class-wide">
+<div class="class-title">1年1組</div>
+<div class="names">
+生徒01　生徒02　生徒03　生徒04　生徒05　生徒06　生徒07　生徒08　生徒09　生徒10  
+生徒11　生徒12　生徒13　生徒14　生徒15　生徒16　生徒17　生徒18　生徒19　生徒20  
+生徒21　生徒22　生徒23　生徒24　生徒25　生徒26　生徒27　生徒28　生徒29　生徒30
+</div>
+</div>
+
+<div class="class-wide">
+<div class="class-title">1年2組</div>
+<div class="names">
+生徒01　生徒02　生徒03　生徒04　生徒05　生徒06　生徒07　生徒08　生徒09　生徒10  
+生徒11　生徒12　生徒13　生徒14　生徒15　生徒16　生徒17　生徒18　生徒19　生徒20  
+生徒21　生徒22　生徒23　生徒24　生徒25　生徒26　生徒27　生徒28　生徒29　生徒30
+</div>
+</div>
+</div>
+
+</div>
+
+<!-- 教職員 -->
+<div class="section">
+<div class="role">Teachers & Staff</div>
+<div class="name">山田 太郎</div>
+<div class="name">佐藤 花子</div>
+<div class="name">鈴木 一郎</div>
+<div class="name">高橋 美咲</div>
+<div class="name">田中 次郎</div>
+<div class="name">伊藤 翔</div>
+<div class="name">渡辺 直樹</div>
+<div class="name">中村 優</div>
+<div class="name">小林 大輔</div>
+<div class="name">加藤 真理</div>
+</div>
+
+<!-- スタッフ -->
+<div class="section">
+<div class="role">制作・協力スタッフ</div>
+<div class="name">スタッフA</div>
+<div class="name">スタッフB</div>
+<div class="name">スタッフC</div>
+<div class="name">スタッフD</div>
+<div class="name">スタッフE</div>
+<div class="name">スタッフF</div>
+<div class="name">スタッフG</div>
+<div class="name">スタッフH</div>
+<div class="name">スタッフI</div>
+<div class="name">スタッフJ</div>
+</div>
+
+<!-- 楽曲 -->
+<div class="section">
+<div class="role">使用楽曲</div>
+<div class="name">曲A / 作曲：〇〇 / 編曲：〇〇 / アーティスト：〇〇</div>
+<div class="name">曲B / 作曲：〇〇 / 編曲：〇〇 / アーティスト：〇〇</div>
+<div class="name">曲C / 作曲：〇〇 / 編曲：〇〇 / アーティスト：〇〇</div>
+<div class="name">曲D / 作曲：〇〇 / 編曲：〇〇 / アーティスト：〇〇</div>
+<div class="name">曲E / 作曲：〇〇 / 編曲：〇〇 / アーティスト：〇〇</div>
+<div class="name">曲F / 作曲：〇〇 / 編曲：〇〇 / アーティスト：〇〇</div>
+</div>
+
+<!-- 映像 -->
+<div class="section">
+<div class="role">映像作成</div>
+<div class="name">〇〇 〇〇</div>
+</div>
+
+<!-- 監督 -->
+<div class="section">
+<div class="role">監督</div>
+<div class="name">〇〇 〇〇</div>
+</div>
+
+<!-- 学校 -->
+<div class="section">
+<div class="school">〇〇高等学校</div>
+</div>
+
+</div>
+</div>
+
+<!-- コントロール -->
+<div class="controls">
+<button onclick="play()">▶ 再生</button>
+<button onclick="pause()">⏸ 停止</button>
+<button onclick="reset()">⏹ リセット</button>
+</div>
+
+<script>
+const credits = document.getElementById("credits");
+
+function play() {
+  credits.style.animationPlayState = "running";
+}
+
+function pause() {
+  credits.style.animationPlayState = "paused";
+}
+
+function reset() {
+  credits.style.animation = "none";
+  credits.offsetHeight;
+  credits.style.animation = "scroll 270s linear forwards";
+  credits.style.animationPlayState = "paused";
+}
+</script>
+
+</body>
+</html>
