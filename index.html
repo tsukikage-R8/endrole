@@ -3,7 +3,9 @@
 <head>
 <meta charset="UTF-8">
 <title>Credits</title>
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
 
+  
 <style>
 body{
   margin:0;
@@ -40,9 +42,62 @@ body{
   opacity:0.85;
 }
 
+.section{
+  font-family: "Great Vibes", cursive;
+  font-size:42px;
+  letter-spacing:2px;
+  text-align:center;
+  position:relative;
+  color:white;
+}
+
+.section::after{
+  content:"✦";
+  position:absolute;
+  top:50%;
+  left:-20px;
+  transform:translateY(-50%);
+  opacity:0;
+  animation: sparkle 2.5s infinite;
+  color:#fff6a6;
+  text-shadow:0 0 10px #fff6a6;
+}
+
+@keyframes sparkle{
+  0%   { left:-20px; opacity:0; }
+  20%  { opacity:1; }
+  50%  { opacity:1; }
+  100% { left:110%; opacity:0; }
+}
+
 .class-row{
   display:flex;
   justify-content:center;
+}
+
+.section{
+  text-align:center;
+  font-size:24px;
+  letter-spacing:3px;
+  opacity:0.8;
+}
+
+/* 見出しの下の余白 */
+.cast{ margin-bottom:60px; }
+.teacher{ margin-bottom:80px; }
+.music{ margin-bottom:100px; }
+
+/* 本体の間隔（重要） */
+.cast-area{
+  margin-bottom:220px;
+}
+
+.teacher-area{
+  margin-bottom:260px;
+}
+
+.music-area{
+  margin-bottom:320px;
 }
 
 .endroll{
@@ -501,6 +556,8 @@ button{
 
 
 <!-- FACULTY -->
+<div class="section teacher-area">
+
 <div class="section">FACULTY</div>
 <div class="center">
 ◯△ 俊夫 ◯△ 俊夫 ◯△ 俊夫 ◯△ 俊夫 ◯△ 俊夫 ◯△ 俊夫 ◯△ 俊夫 ◯△ 俊夫 ◯△ 俊夫 ◯△ 俊夫 ◯△ 俊夫 ◯△ 俊夫 ◯△ 俊夫 ◯△ 俊夫 ◯△ 俊夫 ◯△ 俊夫 ◯△ 俊夫 ◯△ 俊夫 ◯△ 俊夫 ◯△ 俊夫 ◯△ 俊夫 ◯△ 俊夫 ◯△ 俊夫 ◯△ 俊夫 ◯△ 俊夫 ◯△ 俊夫 ◯△ 俊夫 ◯△ 俊夫 ◯△ 俊夫 ◯△ 俊夫 ◯△ 俊夫 ◯△ 俊夫 ◯△ 俊夫
@@ -508,6 +565,8 @@ button{
 
 <!-- FACULTY -->
 <div class="section">使用楽曲</div>
+<div class="section music-area">
+
 <div class="row">
 
   <div class="group">
